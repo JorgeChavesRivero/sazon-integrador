@@ -1,0 +1,49 @@
+@layer base {
+  :root {
+    --sazon-verde-noche: #114622;
+    --sazon-verde-nutresa: #215B33;
+    --sazon-verde-hoja: #3D8E33;
+    --sazon-lima: #7FBA00;
+    --sazon-verde-agua: #569E8F;
+    --sazon-rojo-nutresa: #D6121A;
+    --sazon-cafe-oscuro: #2A1605;
+    --sazon-gris-texto: #3F4040;
+    --sazon-marfil: #F4F4E8;
+    --sazon-marfil-2: #E9E8D7;
+    --sazon-verde-neon: #66D149;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--sazon-marfil);
+    color: var(--sazon-gris-texto);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+}
+
+.font-poppins {
+  font-family: 'Poppins', system-ui, sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.font-mono-tag {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.receta-btn-nuevo {
+  background-color: #7FBA00;
+  color: #114622;
+  transition: all 0.2s ease;
+}
+
+.receta-btn-nuevo:hover {
+  background-color: #6da300;
+  transform: translateY(-2px);
+}

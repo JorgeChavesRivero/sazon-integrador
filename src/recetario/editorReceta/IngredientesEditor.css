@@ -1,0 +1,197 @@
+:root {
+  --sazon-marfil: #F4F4E8;
+  --sazon-verde-nutresa: rgb(27, 67, 50);
+  --sazon-verde-hoja: #3D8E33;
+  --sazon-cacao: #643B22;
+  --font-titulo: 'Poppins', sans-serif;
+  --font-cuerpo: 'Inter', sans-serif;
+  --font-tecnico: 'IBM Plex Mono', monospace;
+}
+
+.receta-editor-ingredientes {
+  background-color: var(--bg-general, var(--sazon-marfil));
+  border: 2px solid var(--verde-hoja, var(--sazon-verde-hoja));
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  font-family: var(--font-cuerpo);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .receta-editor-ingredientes,
+.dark-mode .receta-editor-ingredientes {
+  background-color: var(--bg-general, var(--sazon-verde-nutresa));
+  color: var(--sazon-marfil);
+}
+
+.receta-editor-ingredientes__titulo {
+  font-family: var(--font-titulo);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--cacao, var(--sazon-cacao));
+}
+
+[data-theme="dark"] .receta-editor-ingredientes__titulo,
+.dark-mode .receta-editor-ingredientes__titulo {
+  color: var(--sazon-marfil);
+}
+
+.receta-editor-ingredientes__alerta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-family: var(--font-tecnico);
+  font-size: 0.85rem;
+  border-left: 4px solid;
+}
+
+.receta-editor-ingredientes__alerta--error {
+  background-color: #fdecea;
+  color: #8a1f11;
+  border-color: #d93025;
+}
+
+.receta-editor-ingredientes__alerta--exito {
+  background-color: #e6f4ea;
+  color: #137333;
+  border-color: var(--sazon-verde-hoja);
+}
+
+.receta-editor-ingredientes__alerta-cerrar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.receta-editor-ingredientes__form {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 1.5rem;
+}
+
+.receta-editor-ingredientes__grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.receta-editor-ingredientes__label {
+  font-family: var(--font-tecnico);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.receta-editor-ingredientes__input,
+.receta-editor-ingredientes__select {
+  font-family: var(--font-tecnico);
+  font-size: 0.9rem;
+  padding: 0.6rem 0.75rem;
+  border: 1.5px solid var(--cacao, var(--sazon-cacao));
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.receta-editor-ingredientes__input:focus,
+.receta-editor-ingredientes__select:focus {
+  outline: none;
+  border-color: var(--verde-hoja, var(--sazon-verde-hoja));
+  box-shadow: 0 0 0 2px rgba(61, 142, 51, 0.2);
+}
+
+.receta-editor-ingredientes__btn {
+  font-family: var(--font-tecnico);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.receta-editor-ingredientes__btn:hover {
+  opacity: 0.9;
+}
+
+.receta-editor-ingredientes__btn--agregar {
+  background-color: var(--verde-hoja, var(--sazon-verde-hoja));
+  color: #ffffff;
+}
+
+.receta-editor-ingredientes__btn--eliminar {
+  background-color: var(--cacao, var(--sazon-cacao));
+  color: var(--sazon-marfil);
+  padding: 0.4rem 0.75rem;
+}
+
+.receta-editor-ingredientes__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.receta-editor-ingredientes__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #1a1a1a;
+  border: 1px solid rgba(100, 59, 34, 0.25);
+  border-radius: 6px;
+}
+
+.receta-editor-ingredientes__item-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.receta-editor-ingredientes__badge {
+  font-family: var(--font-tecnico);
+  font-size: 0.8rem;
+  background-color: var(--sazon-verde-nutresa);
+  color: var(--sazon-marfil);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.receta-editor-ingredientes__vacio {
+  font-family: var(--font-cuerpo);
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-align: center;
+  padding: 1rem;
+  border: 1px dashed var(--cacao, var(--sazon-cacao));
+  border-radius: 6px;
+}
+
+/* Responsive: Desktop (Icono + Texto) | Mobile (Solo Icono) */
+@media (max-width: 768px) {
+  .receta-editor-ingredientes__form {
+    grid-template-columns: 1fr;
+  }
+  .receta-editor-ingredientes__btn-texto {
+    display: none;
+  }
+}

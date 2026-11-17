@@ -1,0 +1,80 @@
+export const recetasSemilla = [
+  {
+    id: 1,
+    codigo: '#501',
+    nombreReceta: 'Tiramisú Criollo de Corona',
+    marca: 'CHOCOLATE CORONA',
+    descripcion: 'Postre tradicional con toque de chocolate Corona y café.',
+    tiempoPreparacion: 30,
+    porciones: 6,
+    dificultad: 'Baja',
+    estado: 'publicada',
+    autor: 'C. Cruz · Repostería',
+    categoriaId: 1
+  },
+  {
+    id: 2,
+    codigo: '#502',
+    nombreReceta: 'Tornillos Doria Carbonara',
+    marca: 'PASTAS DORIA',
+    descripcion: 'Pasta corta Doria en salsa cremosa con trozos selectos.',
+    tiempoPreparacion: 25,
+    porciones: 4,
+    dificultad: 'Media',
+    estado: 'publicada',
+    autor: 'C. Cruz · Pastas',
+    categoriaId: 2
+  },
+  {
+    id: 3,
+    codigo: '#503',
+    nombreReceta: 'Lomo Zenú Glaseado Colcafé',
+    marca: 'ZENÚ & COLCAFÉ',
+    descripcion: 'Lomo de cerdo Zenú con reducción de café.',
+    tiempoPreparacion: 75,
+    porciones: 8,
+    dificultad: 'Alta',
+    estado: 'borrador',
+    autor: 'C. Cruz · Carnes',
+    categoriaId: 3
+  },
+  {
+    id: 4,
+    codigo: '#504',
+    nombreReceta: 'Cheesecake Costra Saltín',
+    marca: 'NOEL TRADICIONAL',
+    descripcion: 'Cheesecake cremoso con base de galletas Saltín Noel.',
+    tiempoPreparacion: 45,
+    porciones: 10,
+    dificultad: 'Baja',
+    estado: 'publicada',
+    autor: 'C. Cruz · Postres',
+    categoriaId: 1
+  },
+  {
+    id: 5,
+    codigo: '#505',
+    nombreReceta: 'Arepa de Chócolo Pietrán',
+    marca: 'PIETRÁN',
+    descripcion: 'Arepa de chócolo con jamón y queso fitness Pietrán.',
+    tiempoPreparacion: 15,
+    porciones: 2,
+    dificultad: 'Baja',
+    estado: 'publicada',
+    autor: 'C. Cruz · Platos Ligeros',
+    categoriaId: 4
+  },
+  {
+    id: 6,
+    codigo: '#506',
+    nombreReceta: 'Brownie Chocola Jet',
+    marca: 'CHOCOLATES JET',
+    descripcion: 'Brownie fundido con trocitos de barra Jet.',
+    tiempoPreparacion: 35,
+    porciones: 8,
+    dificultad: 'Media',
+    estado: 'borrador',
+    autor: 'C. Cruz · Repostería',
+    categoriaId: 1
+  }
+];

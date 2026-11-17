@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Recetario Digital y Contenido · Sa·zón</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/global.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="../assets/css/global.css" rel="stylesheet"/>
+</head>
+
+<body class="bg-sazon-marfil text-slate-800 dark:bg-sazon-verdeNutresa dark:text-slate-100 min-h-screen flex flex-col font-inter" id="app-body">
+
+  <section class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300" id="sidebar-overlay" onclick="toggleSidebar()"></section>
+
+  <aside class="fixed inset-y-0 left-0 h-screen w-80 sm:w-96 bg-sazon-verdeHoja text-white z-50 shadow-2xl -translate-x-full flex flex-col justify-between p-6 overflow-y-auto" id="sidebar">
+    <section class="flex flex-col flex-1 pb-4">
+      <header class="flex items-center justify-between pb-4 border-b border-white/20">
+        <figure class="flex items-center gap-3 m-0">
+          <span class="w-9 h-9 rounded-full bg-white text-sazon-verdeHoja flex items-center justify-center text-xl font-bold shadow-md">
+            <svg class="w-5 h-5 fill-current text-sazon-verdeHoja" viewbox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
+            </svg>
+          </span>
+          <figcaption>
+            <h2 class="font-poppins text-lg font-extrabold leading-none text-white m-0">Sa·zón</h2>
+            <span class="font-mono-tag text-[10px] tracking-wider uppercase text-white/80 block">Ecosistema Nutresa</span>
+          </figcaption>
+        </figure>
+        <button aria-label="Cerrar menú" class="p-1.5 rounded-lg hover:bg-white/20 text-white text-lg transition-colors" onclick="toggleSidebar()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </header>
+
+      <span class="text-[11px] font-mono-tag uppercase tracking-wider text-white/70 pt-4 pb-2 block">Módulos del Sistema</span>
+
+      <nav class="flex-1 flex flex-col justify-around py-2 font-poppins text-sm">
+        <a class="flex items-center gap-3.5 px-3 py-2 rounded-xl text-white hover:translate-x-1.5 transition-all group hover:bg-white/10" href="../../landing.html" onclick="toggleSidebar()">
+          <i class="bi bi-speedometer2 text-xl w-6 shrink-0 opacity-90 group-hover:opacity-100"></i>
+          <span>Dashboard Principal</span>
+        </a>
+        <a class="flex items-center gap-3.5 px-3 py-2 rounded-xl text-white hover:translate-x-1.5 transition-all group hover:bg-white/10" href="../auth-usuarios/perfil.html" onclick="toggleSidebar()">
+          <i class="bi bi-person-circle text-xl w-6 shrink-0 opacity-90 group-hover:opacity-100"></i>
+          <span>Mi Perfil</span>
+        </a>
+        <a class="flex items-center gap-3.5 px-3 py-2 rounded-xl text-white hover:translate-x-1.5 transition-all group hover:bg-white/10 opacity-90 hover:opacity-100" href="../catalogo-productos/landing.html" onclick="toggleSidebar()">
+          <i class="bi bi-grid text-xl w-6 shrink-0 opacity-90 group-hover:opacity-100"></i>
+          <span>Catálogo Nutresa</span>
+        </a>
+        <a class="flex items-center gap-3.5 px-3 py-2 rounded-xl text-white hover:translate-x-1.5 transition-all group bg-white/20 font-bold" href="../recetario-contenido/landing.html" onclick="toggleSidebar()">
+          <i class="bi bi-book text-xl w-6 shrink-0 opacity-90 group-hover:opacity-100"></i>
+          <span>Recetario y Contenido</span>
+        </a>
+        <a class="flex items-center gap-3.5 px-3 py-2 rounded-xl text-white hover:translate-x-1.5 transition-all group hover:bg-white/10 opacity-90 hover:opacity-100" href="../despensa-virtual/landing.html" onclick="toggleSidebar()">
+          <i class="bi bi-box-seam text-xl w-6 shrink-0 opacity-90 group-hover:opacity-100"></i>
+          <span>Despensa Virtual</span>
+        </a>
+        <a class="flex items-center gap-3.5 px-3 py-2 rounded-xl text-white hover:translate-x-1.5 transition-all group hover:bg-white/10 opacity-90 hover:opacity-100" href="../nutricion-perfiles/landing.html" onclick="toggleSidebar()">
+          <i class="bi bi-heart-pulse text-xl w-6 shrink-0 opacity-90 group-hover:opacity-100"></i>
+          <span>Nutrición y Perfiles</span>
+        </a>
+        <a class="flex items-center gap-3.5 px-3 py-2 rounded-xl text-white hover:translate-x-1.5 transition-all group hover:bg-white/10 opacity-90 hover:opacity-100" href="../planificador-mercado/landing.html" onclick="toggleSidebar()">
+          <i class="bi bi-calendar-week text-xl w-6 shrink-0 opacity-90 group-hover:opacity-100"></i>
+          <span>Planificador y Lista</span>
+        </a>
+        <a class="flex items-center gap-3.5 px-3 py-2 rounded-xl text-white hover:translate-x-1.5 transition-all group hover:bg-white/10 opacity-90 hover:opacity-100" href="../comunidad-valoraciones/landing.html" onclick="toggleSidebar()">
+          <i class="bi bi-chat-heart text-xl w-6 shrink-0 opacity-90 group-hover:opacity-100"></i>
+          <span>Comunidad y Reseñas</span>
+        </a>
+        <a class="flex items-center gap-3.5 px-3 py-2 rounded-xl text-white hover:translate-x-1.5 transition-all group hover:bg-white/10 opacity-90 hover:opacity-100" href="../mercadeo-campanas/landing.html" onclick="toggleSidebar()">
+          <i class="bi bi-megaphone text-xl w-6 shrink-0 opacity-90 group-hover:opacity-100"></i>
+          <span>Campañas y Puntos</span>
+        </a>
+      </nav>
+    </section>
+
+    <footer class="pt-4 border-t border-white/20 space-y-2.5">
+      <button class="w-full flex items-center justify-center gap-2.5 px-4 py-3 rounded-2xl bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md text-white text-xs font-poppins font-bold transition-all shadow-md group" id="btn-close-sidebar" onclick="toggleSidebar()">
+        <i class="bi bi-x-circle text-base text-white group-hover:rotate-90 transition-transform"></i>
+        <span class="tracking-wide text-white">Cerrar Menú</span>
+      </button>
+    </footer>
+  </aside>
+
+  <header class="sticky top-0 z-30 bg-white/95 dark:bg-sazon-verdeNutresaCard/95 backdrop-blur-md border-b border-slate-200 dark:border-emerald-900/60 px-4 lg:px-8 py-3" id="top-header">
+    <section class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <section class="flex items-center gap-3 shrink-0">
+        <button class="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-100 dark:bg-sazon-verdeNutresa text-sazon-verdeHoja dark:text-sazon-verdeNeon hover:bg-sazon-verdeHoja hover:text-white transition-all text-sm font-mono-tag font-bold" onclick="toggleSidebar()">
+          <i class="bi bi-list text-xl"></i>
+          <span class="hidden sm:inline">Menú</span>
+        </button>
+        <a class="flex items-center gap-2 m-0 text-inherit hover:opacity-90 transition-opacity" href="../../landing.html">
+          <span class="w-8 h-8 rounded-lg bg-sazon-verdeHoja text-white flex items-center justify-center font-bold text-lg shadow-sm">
+            <svg class="w-5 h-5 fill-current text-white" viewbox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
+            </svg>
+          </span>
+          <figcaption class="hidden md:block">
+            <h1 class="font-poppins font-black text-lg text-slate-900 dark:text-white leading-none m-0">Sa·zón</h1>
+          </figcaption>
+        </a>
+      </section>
+
+      <form class="flex-1 max-w-2xl mx-2 md:mx-4" id="search-form" onsubmit="event.preventDefault()" role="search">
+        <label class="relative w-full block">
+          <span class="sr-only">Buscar en este módulo o plataforma</span>
+          <i class="bi bi-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-emerald-500"></i>
+          <input class="w-full pl-10 pr-4 py-2 text-xs rounded-full bg-slate-100 dark:bg-sazon-verdeNutresa border border-slate-200 dark:border-emerald-800/80 focus:outline-none focus:ring-2 focus:ring-sazon-verdeHoja dark:text-white" id="global-search" oninput="handleGlobalSearch(event)" placeholder="Buscar en este módulo o plataforma..." type="search"/>
+        </label>
+      </form>
+
+      <section class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <button aria-label="Notificaciones" class="relative p-2 rounded-full hover:bg-slate-100 dark:hover:bg-sazon-verdeNutresa text-slate-600 dark:text-slate-300 transition-colors" onclick="showToast('No tienes notificaciones pendientes')">
+          <i class="bi bi-bell text-lg"></i>
+          <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full border border-white dark:border-sazon-verdeNutresaCard"></span>
+        </button>
+
+        <a class="flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-emerald-800/60 cursor-pointer hover:opacity-80 transition-opacity" href="../auth-usuarios/perfil.html" id="header-user-badge">
+          <img alt="Usuario" class="w-9 h-9 rounded-full object-cover ring-2 ring-sazon-verdeHoja" id="header-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&h=256&q=80"/>
+          <figcaption class="hidden sm:block text-left leading-tight">
+            <span class="font-poppins font-bold text-xs block text-slate-900 dark:text-white" id="header-name">Mariana Morales</span>
+            <span class="font-mono-tag text-[10px] text-slate-500 dark:text-sazon-verdeNeon block capitalize" id="header-role">creador de contenido</span>
+          </figcaption>
+          <i class="bi bi-chevron-down text-xs text-slate-400 hidden sm:block"></i>
+        </a>
+      </section>
+    </section>
+  </header>
+
+  <nav aria-label="Miga de pan" class="bg-slate-100 dark:bg-sazon-verdeNutresaCard/70 border-b border-slate-200 dark:border-emerald-900/40 py-2 px-4 text-xs font-mono-tag overflow-x-auto">
+    <ol class="max-w-7xl mx-auto flex items-center gap-2 whitespace-nowrap list-none m-0 p-0">
+      <li class="flex items-center gap-2">
+        <a class="bg-white dark:bg-sazon-verdeNutresa px-2.5 py-1 rounded-md border border-slate-200 dark:border-emerald-800/60 text-slate-600 dark:text-slate-300 hover:text-sazon-verdeHoja flex items-center gap-1.5 transition-colors" href="../../landing.html">
+          <i class="bi bi-house"></i>
+          <span>Inicio</span>
+        </a>
+        <i class="bi bi-chevron-right text-slate-400 text-[10px]"></i>
+      </li>
+      <li class="flex items-center gap-2">
+        <a class="bg-white dark:bg-sazon-verdeNutresa px-2.5 py-1 rounded-md border border-slate-200 dark:border-emerald-800/60 text-slate-600 dark:text-slate-300 hover:text-sazon-verdeHoja flex items-center gap-1.5 transition-colors" href="../../landing.html">
+          <i class="bi bi-grid"></i>
+          <span>Módulos</span>
+        </a>
+        <i class="bi bi-chevron-right text-slate-400 text-[10px]"></i>
+      </li>
+      <li class="flex items-center">
+        <span aria-current="page" class="bg-sazon-verdeHoja text-white px-2.5 py-1 rounded-md font-bold flex items-center gap-1.5 shadow-sm">
+          <i class="bi bi-book"></i>
+          <span>Célula 2: Recetario y Contenido</span>
+        </span>
+      </li>
+    </ol>
+  </nav>
+
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <article class="bg-white dark:bg-sazon-verdeNutresaCard rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-emerald-900/40 shadow-sm relative overflow-hidden">
+      <header class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-white/10">
+        <section class="space-y-1.5">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono-tag font-bold uppercase tracking-wider bg-sazon-verdeHoja/15 text-sazon-verdeHoja dark:text-sazon-verdeNeon border border-sazon-verdeHoja/30">
+            <i class="bi bi-book"></i>
+            <output>Célula 2</output>
+          </span>
+          <h2 class="font-poppins font-black text-2xl sm:text-3xl text-slate-900 dark:text-white m-0">
+            Recetario y Contenido
+          </h2>
+          <p class="font-inter text-sm text-slate-600 dark:text-slate-300 max-w-2xl m-0">
+            Creación, curaduría y categorización de recetas digitales y contenido multimedia culinario.
+          </p>
+        </section>
+        <aside class="flex items-center gap-2 self-start sm:self-auto">
+          <span class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-white/10 text-xs font-mono-tag text-slate-700 dark:text-slate-300 flex items-center gap-1.5 border border-slate-200 dark:border-white/10">
+            <i class="bi bi-hdd-network text-sazon-verdeHoja"></i>
+            <span>Listo para Fork</span>
+          </span>
+        </aside>
+      </header>
+
+      <section class="pt-6 grid grid-cols-1 md:grid-cols-3 gap-4" id="module-workspace-cards">
+        <article class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c2419] border border-slate-200 dark:border-white/10 space-y-1">
+          <span class="font-mono-tag text-[11px] text-slate-400 block uppercase">Persistencia</span>
+          <p class="font-poppins font-bold text-sm text-slate-900 dark:text-white m-0 flex items-center gap-1.5">
+            <i class="bi bi-check-circle-fill text-sazon-verdeHoja"></i> localStorage Vinculado
+          </p>
+          <p class="font-inter text-xs text-slate-500 dark:text-slate-400 m-0">Acceso global a datos y usuarios</p>
+        </article>
+        <article class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c2419] border border-slate-200 dark:border-white/10 space-y-1">
+          <span class="font-mono-tag text-[11px] text-slate-400 block uppercase">Identidad Visual</span>
+          <p class="font-poppins font-bold text-sm text-slate-900 dark:text-white m-0 flex items-center gap-1.5">
+            <i class="bi bi-palette-fill text-sazon-verdeHoja"></i> Tema Día / Noche
+          </p>
+          <p class="font-inter text-xs text-slate-500 dark:text-slate-400 m-0">Paleta oficial Sa·zón Nutresa</p>
+        </article>
+        <article class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c2419] border border-slate-200 dark:border-white/10 space-y-1">
+          <span class="font-mono-tag text-[11px] text-slate-400 block uppercase">Estructura</span>
+          <p class="font-poppins font-bold text-sm text-slate-900 dark:text-white m-0 flex items-center gap-1.5">
+            <i class="bi bi-code-slash text-sazon-verdeHoja"></i> HTML5 Semántico
+          </p>
+          <p class="font-inter text-xs text-slate-500 dark:text-slate-400 m-0">0 divs y 0 comentarios</p>
+        </article>
+      </section>
+    </article>
+
+    <!-- INICIO DE LA IMPLEMENTACIÓN DE LA HISTORIA DE USUARIO 2.1.3 DENTRO DE module-content -->
+    <section class="space-y-6" id="module-content">
+      <section class="max-w-6xl mx-auto p-6 font-inter">
+        <header class="mb-8 text-center">
+          <h2 class="text-3xl font-poppins font-bold text-slate-900 dark:text-white mb-2">Recetario Gastronómico Nutresa</h2>
+          <p class="text-slate-600 dark:text-slate-300">Busca tus recetas favoritas por texto libre o marca en tiempo real.</p>
+        </header>
+
+        <form class="mb-8 max-w-xl mx-auto" onsubmit="event.preventDefault();">
+          <label for="buscador-recetas" class="block font-poppins font-medium text-sm text-sazon-verdeHoja dark:text-sazon-verdeNeon mb-2">Buscar receta</label>
+          <input 
+            id="buscador-recetas" 
+            type="search" 
+            placeholder="Ej. Doria, Zenú, Pollo, Arepa..." 
+            class="w-full px-4 py-3 rounded-lg bg-white dark:bg-sazon-verdeNutresa border border-slate-300 dark:border-emerald-800 focus:outline-none focus:ring-2 focus:ring-sazon-verdeHoja text-slate-800 dark:text-white font-inter"
+            oninput="filtrarRecetas(event)"
+          />
+        </form>
+
+        <output id="contenedor-resultados" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        </output>
+      </section>
+
+      <script>
+        const recetasMock = [
+          { id: '1', titulo: 'Pasta Doria con Pollo y Verduras', descripcion: 'Deliciosa receta rápida usando pasta Doria y vegetales frescos.', marca: 'Doria', tiempo: '25 min' },
+          { id: '2', titulo: 'Arepa Zenú rellena de Queso', descripcion: 'Arepas doraditas y crujientes con el auténtico sabor Zenú.', marca: 'Zenú', tiempo: '15 min' },
+          { id: '3', titulo: 'Brownie Chocolates Jet', descripcion: 'Postre de chocolate intenso con trozos de barra Jet.', marca: 'Jet', tiempo: '40 min' },
+          { id: '4', titulo: 'Ensalada Pietrán con Pechuga de Pavo', descripcion: 'Opción ligera y saludable con embutidos Pietrán.', marca: 'Pietrán', tiempo: '10 min' }
+        ];
+
+        function inicializarRecetario() {
+          if (!localStorage.getItem('sazon_recetas_lista')) {
+            localStorage.setItem('sazon_recetas_lista', JSON.stringify(recetasMock));
+          }
+          renderizarRecetas(obtenerRecetasAlmacenadas());
+        }
+
+        function obtenerRecetasAlmacenadas() {
+          try {
+            return JSON.parse(localStorage.getItem('sazon_recetas_lista') || '[]');
+          } catch (error) {
+            return [];
+          }
+        }
+
+        function filtrarRecetas(evento) {
+          const textoBusqueda = evento.target.value.toLowerCase().trim();
+          const recetas = obtenerRecetasAlmacenadas();
+          
+          const filtradas = recetas.filter(receta => 
+            receta.titulo.toLowerCase().includes(textoBusqueda) || 
+            receta.descripcion.toLowerCase().includes(textoBusqueda) ||
+            receta.marca.toLowerCase().includes(textoBusqueda)
+          );
+          
+          renderizarRecetas(filtradas);
+        }
+
+        function renderizarRecetas(lista) {
+          const contenedor = document.getElementById('contenedor-resultados');
+          if (!contenedor) return;
+          
+          if (lista.length === 0) {
+            contenedor.innerHTML = '<article class="col-span-full text-center py-8"><p class="text-slate-500 dark:text-slate-400 font-inter">No se encontraron recetas con los términos especificados.</p></article>';
+            return;
+          }
+          
+          let html = '';
+          for (const receta of lista) {
+            html += `
+              <article class="bg-white dark:bg-sazon-verdeNutresa rounded-xl shadow-md overflow-hidden border border-slate-200 dark:border-emerald-800/60 flex flex-col justify-between">
+                <header class="p-5">
+                  <span class="inline-block px-3 py-1 text-xs font-mono-tag bg-sazon-marfil dark:bg-sazon-verdeNutresaCard text-sazon-verdeNutresa dark:text-sazon-verdeNeon rounded-full mb-3">${receta.marca}</span>
+                  <h3 class="text-xl font-poppins font-bold text-slate-900 dark:text-white mb-2">${receta.titulo}</h3>
+                  <p class="text-slate-600 dark:text-slate-300 font-inter text-sm mb-4">${receta.descripcion}</p>
+                </header>
+                <footer class="px-5 pb-5 pt-0 flex justify-between items-center text-xs font-mono-tag text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-emerald-900/60 pt-3">
+                  <time datetime="PT${receta.tiempo}">Tiempo: ${receta.tiempo}</time>
+                  <button onclick="verDetalleReceta('${receta.id}')" class="px-4 py-2 bg-sazon-verdeHoja text-white rounded-lg hover:bg-opacity-90 transition font-mono-tag">Ver Receta</button>
+                </footer>
+              </article>
+            `;
+          }
+          contenedor.innerHTML = html;
+        }
+
+        function verDetalleReceta(id) {
+          if (typeof showToast === 'function') {
+            showToast('Cargando detalles de la receta...');
+          }
+        }
+
+        document.addEventListener('DOMContentLoaded', inicializarRecetario);
+      </script>
+    </section>
+    <!-- FIN DE LA IMPLEMENTACIÓN -->
+  </main>
+
+  <aside class="fixed bottom-20 right-5 z-50 bg-slate-900/90 dark:bg-white/95 text-white dark:text-slate-900 px-4 py-3 rounded-xl shadow-2xl backdrop-blur-md border border-slate-700/50 dark:border-slate-200 text-xs font-mono-tag flex items-center gap-3 hidden transition-all" id="custom-toast">
+    <i class="bi bi-info-circle-fill text-sazon-verdeNeon dark:text-sazon-verdeHoja text-base"></i>
+    <output id="toast-msg">Mensaje de notificación...</output>
+  </aside>
+
+  <aside class="fixed bottom-5 right-5 z-40 bg-white/95 dark:bg-[#133124]/95 backdrop-blur-md rounded-full p-1.5 shadow-2xl border border-black/10 dark:border-white/20 flex items-center gap-1 font-mono text-xs">
+    <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#3D8E33] text-white font-bold shadow-sm transition-all duration-200" id="themeDayBtn" onclick="switchTheme('light')" title="Activar Modo Día" type="button">
+      <i class="bi bi-sun-fill text-sm"></i>
+      <span>Día</span>
+    </button>
+    <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 transition-all duration-200" id="themeNightBtn" onclick="switchTheme('dark')" title="Activar Modo Noche" type="button">
+      <i class="bi bi-moon-stars-fill text-sm"></i>
+      <span>Noche</span>
+    </button>
+  </aside>
+
+  <footer class="relative z-20 bg-sazon-cacao dark:bg-sazon-verdeNutresa/95 text-white/90 py-3 px-4 sm:px-8 border-t border-black/10 dark:border-white/10 transition-colors duration-300" id="main-footer">
+    <section class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2.5">
+      <article class="text-center md:text-left space-y-0.5">
+        <p class="font-poppins font-bold text-xs m-0 text-white">Equipo de Desarrollo Sa·zón</p>
+        <p class="font-mono-tag text-[10px] text-white/70 m-0">Copyright © 2026 Grupo Nutresa · Todos los derechos reservados</p>
+      </article>
+
+      <nav class="flex flex-wrap justify-center items-center gap-2">
+        <span class="h-7 px-2.5 rounded-full bg-white/90 hover:bg-white border border-white/20 flex items-center justify-center shadow-sm transition-all" title="Zenú">
+          <img alt="Zenú" class="h-4 w-auto max-w-[55px] object-contain" src="../assets/images/zenu.png"/>
+        </span>
+        <span class="h-7 px-2.5 rounded-full bg-white/90 hover:bg-white border border-white/20 flex items-center justify-center shadow-sm transition-all" title="Doria">
+          <img alt="Doria" class="h-4 w-auto max-w-[55px] object-contain" src="../assets/images/doriapng.png"/>
+        </span>
+        <span class="h-7 px-2.5 rounded-full bg-white/90 hover:bg-white border border-white/20 flex items-center justify-center shadow-sm transition-all" title="Jet">
+          <img alt="Jet" class="h-4 w-auto max-w-[50px] object-contain" src="../assets/images/jet.svg"/>
+        </span>
+        <span class="h-7 px-2.5 rounded-full bg-white/90 hover:bg-white border border-white/20 flex items-center justify-center shadow-sm transition-all" title="Pietrán">
+          <img alt="Pietrán" class="h-4 w-auto max-w-[55px] object-contain" src="../assets/images/pietran.png"/>
+        </span>
+        <span class="h-7 px-2.5 rounded-full bg-white/90 hover:bg-white border border-white/20 flex items-center justify-center shadow-sm transition-all" title="Noel">
+          <img alt="Noel" class="h-4 w-auto max-w-[45px] object-contain" src="../assets/images/noel.svg"/>
+        </span>
+        <span class="h-7 px-2.5 rounded-full bg-white/90 hover:bg-white border border-white/20 flex items-center justify-center shadow-sm transition-all" title="Corona">
+          <img alt="Corona" class="h-4 w-auto max-w-[55px] object-contain" src="../assets/images/corona.svg"/>
+        </span>
+        <span class="h-7 px-2.5 rounded-full bg-white/90 hover:bg-white border border-white/20 flex items-center justify-center shadow-sm transition-all" title="Novaventa">
+          <img alt="Novaventa" class="h-4 w-auto max-w-[55px] object-contain" src="../assets/images/novaventapng.png"/>
+        </span>
+        <span class="h-7 px-2.5 rounded-full bg-white/90 hover:bg-white border border-white/20 flex items-center justify-center shadow-sm transition-all" title="Grupo Nutresa">
+          <img alt="Grupo Nutresa" class="h-4 w-auto max-w-[65px] object-contain" src="../assets/images/nutresa.png"/>
+        </span>
+      </nav>
+    </section>
+  </footer>
+
+  <script src="../assets/js/usuarios-db.js" type="module"></script>
+</body>
+</html>

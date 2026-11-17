@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" width="260" height="100">
+  <path d="M100 25 L115 42 L130 18 L145 42 L160 25 L155 52 L105 52 Z" fill="#ffd100"/>
+  <circle cx="100" cy="23" r="3.5" fill="#ffd100"/>
+  <circle cx="130" cy="16" r="4.5" fill="#ffd100"/>
+  <circle cx="160" cy="23" r="3.5" fill="#ffd100"/>
+  <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="900" font-size="28" fill="#ffd100" stroke="#643b22" stroke-width="3" paint-order="stroke fill" letter-spacing="4">CORONA</text>
+</svg>

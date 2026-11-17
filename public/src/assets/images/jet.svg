@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 100" width="280" height="100">
+  <path d="M15 50 L35 15 L55 50 Z" fill="#ffd100" opacity="0.9"/>
+  <circle cx="255" cy="25" r="10" fill="#ffd100"/>
+  <path d="M250 75 L265 50 L275 85 Z" fill="#ffd100" opacity="0.8"/>
+  <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="'Poppins', 'Arial Black', sans-serif" font-weight="900" font-style="italic" font-size="68" fill="#ffd100" stroke="#0b3b8c" stroke-width="4" paint-order="stroke fill" letter-spacing="4">JET</text>
+</svg>

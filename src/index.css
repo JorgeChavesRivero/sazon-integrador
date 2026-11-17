@@ -1,0 +1,609 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sazon-marfil: #F4F4E8;
+  --color-sazon-cacao: #643B22;
+  --color-sazon-cacaoText: #F4F4E8;
+  --color-sazon-verdeNoche: #114622;
+  --color-sazon-verdeHondo: #215B33;
+  --color-sazon-verdeHoja: #3D8E33;
+  --color-sazon-hoja: #7FBA00;
+  --color-sazon-verdeNutresa: #1B4332;
+  --color-sazon-verdeNutresaCard: #133326;
+  --color-sazon-verdeNeon: #66d149;
+  --color-sazon-texto: #3F4040;
+  --color-sazon-texto2: #5B5E60;
+  --color-sazon-brandZenu: #D32F2F;
+  --color-sazon-brandDoria: #E65100;
+  --color-sazon-brandPietran: #2E7D32;
+  --color-sazon-brandNoel: #C2185B;
+
+  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-mono-tag: 'IBM Plex Mono', monospace;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/ibm-plex-mono-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/ibm-plex-mono-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/ibm-plex-mono-500-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/ibm-plex-mono-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/ibm-plex-mono-600-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/ibm-plex-mono-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/ibm-plex-mono-700-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/ibm-plex-mono-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/inter-300-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/inter-300-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/inter-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/inter-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/inter-500-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/inter-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/inter-600-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/inter-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/inter-700-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/inter-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/poppins-500-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/poppins-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/poppins-600-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/poppins-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/poppins-700-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/poppins-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/poppins-800-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/poppins-800-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../fonts/poppins-900-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../fonts/poppins-900-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --sazon-marfil: #F4F4E8;
+  --sazon-cacao: #643B22;
+  --sazon-cacaoText: #F4F4E8;
+  --sazon-verdeNoche: #114622;
+  --sazon-verdeHondo: #215B33;
+  --sazon-verdeHoja: #3D8E33;
+  --sazon-hoja: #7FBA00;
+  --sazon-verdeNutresa: #1B4332;
+  --sazon-verdeNutresaCard: #133326;
+  --sazon-verdeNeon: #66d149;
+  --sazon-texto: #3F4040;
+  --sazon-texto2: #5B5E60;
+}
+
+body {
+  background-color: #F4F4E8;
+  color: #3F4040;
+  font-family: 'Inter', sans-serif;
+}
+
+.dark body {
+  background-color: #114622;
+  color: #F4F4E8;
+}
+
+#top-header {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-bottom: 1px solid #DAD9C4 !important;
+}
+
+.dark #top-header {
+  background-color: rgba(19, 51, 38, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+#btn-toggle-menu {
+  background-color: #f1f5f9 !important;
+  color: #215B33 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.dark #btn-toggle-menu {
+  background-color: #1B4332 !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.dark #btn-toggle-menu i {
+  color: #66d149 !important;
+}
+
+.dark #btn-toggle-menu span {
+  color: #ffffff !important;
+}
+
+#btn-toggle-menu i {
+  color: #3D8E33 !important;
+  transition: color 0.2s ease !important;
+}
+
+#btn-toggle-menu span {
+  color: #215B33 !important;
+  transition: color 0.2s ease !important;
+}
+
+#btn-toggle-menu:hover {
+  background-color: #3D8E33 !important;
+  color: #ffffff !important;
+  border-color: #3D8E33 !important;
+}
+
+#btn-toggle-menu:hover i,
+#btn-toggle-menu:hover span {
+  color: #ffffff !important;
+}
+
+#sidebar-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  background-color: rgba(0, 0, 0, 0.45) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  z-index: 40 !important;
+  opacity: 1 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+#sidebar-overlay.hidden {
+  display: none !important;
+}
+
+#sidebar-overlay.opacity-0 {
+  opacity: 0 !important;
+}
+
+#sidebar {
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 20rem !important;
+  max-width: 85vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  z-index: 50 !important;
+  background-color: #3D8E33 !important;
+  color: #ffffff !important;
+  transform: translateX(0) !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  overflow-y: auto !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+#sidebar.-translate-x-full {
+  transform: translateX(-100%) !important;
+}
+
+#sidebar section, #sidebar figure, #sidebar figcaption, #sidebar header, #sidebar footer, #sidebar nav {
+  background-color: transparent !important;
+}
+
+#sidebar h2, #sidebar p, #sidebar span, #sidebar a, #sidebar button, #sidebar i {
+  color: #ffffff !important;
+}
+
+#sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+#btn-logout {
+  background-color: rgba(255, 255, 255, 0.16) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+}
+
+#btn-logout:hover {
+  background-color: rgba(255, 255, 255, 0.28) !important;
+  border-color: rgba(255, 255, 255, 0.55) !important;
+  transform: translateY(-1px);
+}
+
+#hero-banner {
+  background-color: #1B4332 !important;
+  color: #ffffff !important;
+}
+
+#hero-banner h2, #hero-banner p, #hero-banner span, #hero-banner a, #hero-banner button, #hero-banner i {
+  color: #ffffff !important;
+}
+
+#main-footer {
+  background-color: #643B22 !important;
+  color: #F4F4E8 !important;
+}
+
+#main-footer p, #main-footer span, #main-footer i, #main-footer nav {
+  color: #F4F4E8 !important;
+}
+
+h1, h2, h3, h4, h5, h6, strong, .font-title, .font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+p, span, li, a, .font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mono-tag {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.bg-sazon-marfil { background-color: #F4F4E8; }
+.bg-sazon-cacao { background-color: #643B22; }
+.bg-sazon-verdeHoja { background-color: #3D8E33; }
+.bg-sazon-verdeNutresa { background-color: #1B4332; }
+.bg-sazon-verdeNutresaCard { background-color: #133326; }
+
+.text-sazon-verdeNoche { color: #114622; }
+.text-sazon-verdeHondo { color: #215B33; }
+.text-sazon-verdeHoja { color: #3D8E33; }
+.text-sazon-hoja { color: #7FBA00; }
+.text-sazon-verdeNeon { color: #66d149; }
+.text-sazon-texto { color: #3F4040; }
+.text-sazon-texto2 { color: #5B5E60; }
+.text-sazon-cacao { color: #643B22; }
+.text-sazon-cacaoText { color: #F4F4E8; }
+.text-sazon-verdeNutresa { color: #1B4332; }
+
+.btn-action-primary {
+  background-color: #ffffff !important;
+  color: #1B4332 !important;
+}
+
+.btn-action-primary span {
+  color: #1B4332 !important;
+}
+
+.btn-action-primary i.text-sazon-verdeHoja {
+  color: #3D8E33 !important;
+}
+
+.btn-action-primary:hover {
+  background-color: #f8fafc !important;
+  transform: translateY(-1px);
+}
+
+.border-sazon-verdeHoja { border-color: #3D8E33 !important; }
+.border-sazon-verdeNeon { border-color: #66d149 !important; }
+.ring-sazon-verdeHoja {
+  --tw-ring-color: #3D8E33;
+  box-shadow: 0 0 0 2px #3D8E33;
+}
+
+button, input, select, label, .font-mono-tag, code, .badge, time, output { font-family: 'IBM Plex Mono', monospace; }
+
+body, aside, section, article, button, input {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); }
+::-webkit-scrollbar-thumb { background: #3D8E33; border-radius: 4px; }
+
+.feature-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.feature-card:hover {
+  transform: translateY(-3px);
+}
+
+@keyframes float-1 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes float-2 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-22px) rotate(-3deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes float-3 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(2.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes float-4 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-26px) rotate(-2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.float-anim-1 { animation: float-1 4.5s ease-in-out infinite; }
+.float-anim-2 { animation: float-2 6.5s ease-in-out infinite 0.4s; }
+.float-anim-3 { animation: float-3 5.5s ease-in-out infinite 0.8s; }
+.float-anim-4 { animation: float-4 7s ease-in-out infinite 1.2s; }
+.float-anim-5 { animation: float-1 5.8s ease-in-out infinite 1.6s; }
+.float-anim-6 { animation: float-2 6.2s ease-in-out infinite 2s; }
+.float-anim-7 { animation: float-3 7.5s ease-in-out infinite 0.6s; }
+.float-anim-8 { animation: float-4 8s ease-in-out infinite 1.4s; }
+
+.floating-anchor {
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+.floating-card {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.floating-card:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
+}
+
+#hero-bg-photo {
+  filter: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.green-bottom-shadow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 260px;
+  background: linear-gradient(to top, rgba(27, 67, 50, 0.98) 0%, rgba(27, 67, 50, 0.70) 48%, rgba(27, 67, 50, 0) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.recipe-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.recipe-img-wrap img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.recipe-card:hover .recipe-img-wrap img {
+  transform: scale(1.08);
+}
+
+.brand-showcase-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-showcase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.brand-showcase-card img.bg-photo {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-showcase-card:hover img.bg-photo {
+  transform: scale(1.06);
+}
