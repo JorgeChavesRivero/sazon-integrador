@@ -1,0 +1,29 @@
+.campo-invalido {
+  border-color: #b91c1c;
+  outline: 2px solid #b91c1c;
+  outline-offset: 0;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #66D149;
+  outline-offset: 2px;
+}
+
+dialog {
+  margin: auto;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+#toast-msg:empty {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #sidebar {
+    transition: none;
+  }
+}
